@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: black;
+}
+
+/* main.margins {
+  margin: 0 45px 0 45px;
+} */
+
+p.normal {
+  color: #ffea00;
+}
+
+p.action {
+  color: #ff7300;
+}
+
 input[type='number'] {
   -moz-appearance: textfield;
   appearance: textfield;
