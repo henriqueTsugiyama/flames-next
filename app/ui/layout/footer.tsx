@@ -1,7 +1,13 @@
+import styles from '../styles/footer.module.css'
+
 export default function Footer() {
+    const date = new Date()
+    const year = date.getFullYear()
+
     return (
-        <div className='bg-red-300 p-8'>
-            <h3>FOOTER</h3>
-        </div>
+        <footer className={`${styles.footer_container} text-red-800 text-xs`}>
+            <p>Copyright ©{year} Grupo Flames Pirotecnia</p>
+            <p>Desenvolvido por Henrique Tsugiyama</p>
+        </footer>
     )
 }

@@ -1,0 +1,11 @@
+.footer_container {
+    background: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 45px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  
