@@ -6,15 +6,15 @@ body {
   background-color: black;
 }
 
-/* main.margins {
-  margin: 0 45px 0 45px;
-} */
+.color-normal {
+  color: #e20909;
+}
 
-p.normal {
+.color-active {
   color: #ffea00;
 }
 
-p.action {
+.color-action {
   color: #ff7300;
 }
 

@@ -1,5 +1,24 @@
-.shape {
+.navbar {
+    position: static;
+    background: #000000;
+    transition: background 400ms ease-in-out;
+    padding: 10px 6px;
+    height: 96px;
+    width: 100%;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    background-color: aqua;
 }
+
+.navbar_sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: background 400ms ease-in-out;
+    background: #000000e7;
+}
+
+.transition_scroll_down {  
+    margin-top: 20px;
+    transition: margin-top 400ms ease-in-out;
+}
+  

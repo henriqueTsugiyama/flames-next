@@ -1,5 +1,7 @@
 import '@/app/ui/styles/global.css'
 import { inter } from './ui/fonts';
+import Header from './ui/layout/header';
+import Footer from './ui/layout/footer';
 
 export default function RootLayout({
   children,
@@ -8,9 +10,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* <body>{children}</body> */}
-
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body id='main-content' className={`${inter.className} antialiased`}>
+        <Header />
+        <div className=''>
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }
