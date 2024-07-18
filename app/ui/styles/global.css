@@ -11,6 +11,12 @@ body {
   min-height: 100vh;
 }
 
+.desktop-image {
+  position: static;
+  max-height: 90vh;
+  width: 100vw;
+}
+
 .color-normal {
   color: #e20909;
 }
@@ -38,3 +44,10 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
+svg {
+  margin-left: 7px;
+}
+
+svg:hover {
+  color: #ffea00;
+}

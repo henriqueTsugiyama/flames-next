@@ -1,8 +1,8 @@
 import '@/app/ui/styles/global.css'
-import { inter } from './ui/fonts';
+import { redhat, inter } from './ui/fonts';
 import Header from './ui/layout/header';
 import Footer from './ui/layout/footer';
-
+import Image  from 'next/image'
 export default function RootLayout({
   children,
 }: {
