@@ -9,17 +9,14 @@ export default function Header() {
     useEffect(() => {
         window.onscroll = function() {onScrollY()}
         const navbar = document.getElementById('navbar')
-        const mainContent = document.getElementById('main-content')
         const sticky = navbar?.offsetTop ?? 0
 
         function onScrollY() {
             if (window.pageYOffset > sticky) {
                 navbar?.classList.add(styles.navbar_sticky)
-                mainContent?.classList.add(styles.transition_scroll_down)
 
             } else {
                 navbar?.classList.remove(styles.navbar_sticky)
-                mainContent?.classList.remove(styles.transition_scroll_down)
             }
         }
     }, []);
@@ -27,7 +24,7 @@ export default function Header() {
     const whatsappDefaultMessage = 'Olá!%20Poderiam%20me%20ajudar,%20por%20favor?'
 
     return (
-        <div id="navbar" className={`${styles.navbar} flex items-center overflow-hidden`}>
+        <div id="navbar" className={`${styles.navbar} flex items-center overflow-hidden z-10`}>
             <div className="flex w-1/2">
                 <Image
                 src="/flames-logo.png"
@@ -45,10 +42,10 @@ export default function Header() {
                 />
             </div>
 
-            <div className="flex justify-end items-center flex-row w-3/4 text-md font-bold color-normal">
+            <div className="flex justify-end items-center flex-row w-3/4 text-xl font-bold color-normal">
                 <Link href="/" className="rounded-md px-3  ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Home</Link>
                 <Link href="/empresa" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Empresa</Link>
-                <Link href="/portfolio" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Portfolio</Link>
+                <Link href="/portfolio" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Portfólio</Link>
                 <Link href="/estrutura" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Estrutura</Link>
                 <Link href="/loja" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Loja</Link>
                 <Link href="/contato" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Contato</Link>

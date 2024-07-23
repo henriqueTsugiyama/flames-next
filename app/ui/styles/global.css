@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
+  background-color: #000000;
 }
 
 #page-container {
@@ -11,10 +11,14 @@ body {
   min-height: 100vh;
 }
 
-.desktop-image {
-  position: static;
-  max-height: 90vh;
-  width: 100vw;
+[class*="mobile-"] {
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .mobile-flex-wrap {
+    flex-wrap: nowrap;
+  }
+  
 }
 
 .color-normal {

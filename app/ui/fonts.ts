@@ -1,5 +1,8 @@
-import { Inter, Lusitana, Red_Hat_Mono } from 'next/font/google'
+import { Inter, Lusitana, Oswald, Montserrat, Work_Sans } from 'next/font/google'
 
 export const inter = Inter({ subsets: ['latin']})
 export const lusitana = Lusitana({ subsets: ['latin'], weight: '700'})
-export const redhat = Red_Hat_Mono({ subsets: ['latin'], weight: '500'})
+export const owswald = Oswald({subsets: ['latin'], weight: '500'})
+export const montserrat = Montserrat({subsets: ['latin'], weight: '400' })
+export const worksans = Work_Sans({subsets: ['latin'], weight: '800' })
+
