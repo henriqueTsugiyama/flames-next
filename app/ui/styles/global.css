@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --red-normal: #e20909;
+  --orange-normal: #ff7300;
+  --yellow-normal: #ffea00;
+  --background-dark: #111827;
+  --background-dark-transparent: #111827bd;
+}
+
 body {
   background-color: #000000;
 }
@@ -14,7 +22,7 @@ body {
 [class*="mobile-"] {
   flex-wrap: wrap;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 780px) {
   .mobile-flex-wrap {
     flex-wrap: nowrap;
   }
@@ -22,15 +30,15 @@ body {
 }
 
 .color-normal {
-  color: #e20909;
+  color: var(--red-normal);
 }
 
 .color-active {
-  color: #ffea00;
+  color: var(--yellow-normal);
 }
 
 .color-action {
-  color: #ff7300;
+  color: var(--yellow-normal);
 }
 
 input[type='number'] {

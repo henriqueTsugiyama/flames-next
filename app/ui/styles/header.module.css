@@ -5,7 +5,7 @@
     flex-direction: column;
 
     position: fixed;
-    background: #111827;
+    background: var(--background-dark);
     transition: background 400ms ease-in-out;
     padding: 12px 25px;
     height: 120px;
@@ -16,7 +16,7 @@
 
 .navbar_sticky {
     transition: background 400ms ease-in-out;
-    background: #111827bd;
+    background: var(--background-dark-transparent);
 }
 
 .navbar_mobile {
@@ -36,7 +36,7 @@
     position: absolute;
     top: 110px;
     left: 0;
-    background: #111827;
+    background: var(--background-dark);
     color: #f0f0f0;
     max-height: 0;
     margin-top: 0;
@@ -47,7 +47,7 @@
 
 .navbar_mobile_content_item {
     padding: 8px;
-    border-bottom: 1px solid pink;
+    border-bottom: 1px solid var(--red-normal);
 }
 .content_expand {
     visibility: visible;

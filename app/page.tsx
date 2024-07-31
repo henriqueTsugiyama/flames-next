@@ -71,11 +71,11 @@ export default function Page() {
           text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
           <Image
             src={"/fireworks_setup.jpg"}
-            width={dimensions.width > 600 ? dimensions.width/2 : dimensions.width}
+            width={dimensions.width > 780 ? dimensions.width/2 : dimensions.width}
             height={dimensions.height}
             alt='40 anos de experiência'
           />
-          <div className='p-10'>
+          <div className='inline-flex flex-col items-start p-8 h-fit'>
             <p className={`${worksans.className} text-2xl`}>Tecnologia</p>
             <p className='py-10 text-left text-lg'>
             Usamos diversos sistemas e tecnologias de ponta para operar os efeitos.<br />
@@ -83,7 +83,7 @@ export default function Page() {
             te atender e direcionar em diversas situações.
             </p>
 
-            <button className='p-8 mt- 10 bg-red-400 rounded-md' onClick={() => console.log(dimensions)}>Saiba mais</button>
+            <button className='p-8 mt-10 bg-red-400 rounded-md' onClick={() => console.log(dimensions)}>Saiba mais</button>
           </div>
         </div>
 
