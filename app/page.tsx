@@ -21,7 +21,7 @@ export default function Page() {
       setDimensions({ width: window.innerWidth, height: window.innerHeight });
     };
     window.addEventListener("resize", handleResize);
-    console.log(dimensions)
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
