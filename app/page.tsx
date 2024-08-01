@@ -6,7 +6,17 @@ import Carousel from './ui/landing/carousel';
 import Contact from './ui/forms/contact';
 import { useEffect, useState } from "react"
 import { worksans } from './ui/fonts';
+import Link from 'next/link';
 
+const slides = [
+  '/videos/hotel_nacional2019_cascata.mp4',
+  '/videos/hotel_nacional2019_fogos.mp4',
+  '/fireworks-macau-tower.jpg',
+  '/ambipar_skypaper.jpg',
+  '/reveillon-recife.jpg',
+  '/reveillon-peruibe-enhanced.jpg',
+
+]
 
 export default function Page() {
   const [dimensions, setDimensions] = useState({
@@ -30,8 +40,8 @@ export default function Page() {
       <div className='mb-24'>
 
       {/* <Body /> */}
-        <Overlay label='Grupo Flames Pirotecnia' width={dimensions.width} height={dimensions.height}/>
-        <div className='flex mobile-flex-wrap flex-row justify-evenly items-center
+        <Overlay label='A arte de encantar' width={dimensions.width} height={dimensions.height}/>
+        {/* <div className='flex mobile-flex-wrap flex-row justify-evenly items-center
           w-full h-fit min-h-160px 
           text-white bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
           <div className='inline-flex flex-col justify-center p-10 h-full'>
@@ -46,11 +56,34 @@ export default function Page() {
               alt='HopiHari Live Commets'
             />
           </div>
-        </div>
-        <div className='flex w-full text-white h-6 bg-red'>
-          Carrousell de algumas fotos e link portfolio
-          {/* <Carousel /> */}
-        </div>
+        </div> */}
+        <div className='
+        flex flex-col items-center justify-center text-white p-10 h-fit 
+        bg-gradient-to-b from-gray-950 via-gray-900 to-indigo-950
+        '
+        >
+            <p className={`${worksans.className} text-center italic text-2xl pb-10`}>Eventos</p>
+            <Carousel slides={slides} autoSlide={true} autoSlideInterval={1000}>
+            {
+              slides.map((slide, i) => {
+                if (i >= 2) {
+                  return (<Image
+                          key={i}
+                          src={slide}
+                          width={820}
+                          height={400}
+                          alt='carousel picture'
+                        />)
+                } else {
+                  return (
+                    <video  key={i} width={800} height={400} src={slide} autoPlay muted loop />
+                  )
+                }
+              })
+            }  
+          </Carousel>
+          <Link href="/portfolio" className='p-8 mt-10 bg-red-400 rounded-md'>Portfólio completo</Link>
+          </div>
         <div className='flex flex-col items-center w-full text-white p-10 h-fit bg-gray-900'>
           <p className={`${worksans.className} text-2xl`}>Nossa Missão</p>
           <Image
@@ -83,7 +116,7 @@ export default function Page() {
             te atender e direcionar em diversas situações.
             </p>
 
-            <button className='p-8 mt-10 bg-red-400 rounded-md' onClick={() => console.log(dimensions)}>Saiba mais</button>
+            <Link href="/estrutura" className='p-8 mt-10 bg-red-400 rounded-md'>Saiba mais</Link>
           </div>
         </div>
 
