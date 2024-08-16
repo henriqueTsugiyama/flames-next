@@ -6,7 +6,6 @@ import Link from "next/link"
 import { useEffect, useState } from "react";
 import { Bars4Icon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-import { after } from "node:test";
 
 export default function Header() {
     const [dimensions, setDimensions] = useState({
@@ -34,17 +33,13 @@ export default function Header() {
 
     // define dimensions of screen
     useEffect(() => {
-        console.log('before', dimensions)
         setDimensions({ width: window.innerWidth, height: window.innerHeight });
 
-       
         const handleResize = () => {
             setDimensions({ width: window.innerWidth, height: window.innerHeight });
 
-            console.log('handleResize', dimensions)
         };
 
-        console.log('after', dimensions)
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
@@ -99,7 +94,7 @@ export default function Header() {
                 <div className={`${styles.navbar_mobile}`}>
                     <Image
                     src="/flames-logo.png"
-                    width={80}
+                    width={120}
                     height={30}
                     className="block"
                     alt="Screenshots of the dashboard project showing mobile version"

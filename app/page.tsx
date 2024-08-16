@@ -9,12 +9,11 @@ import { worksans } from './ui/fonts';
 import Link from 'next/link';
 
 const slides = [
-  '/videos/hotel_nacional2019_cascata.mp4',
   '/videos/hotel_nacional2019_fogos.mp4',
-  '/fireworks-macau-tower.jpg',
-  '/ambipar_skypaper.jpg',
+  '/iguape-skypaper.jpg',
   '/reveillon-recife.jpg',
-  '/reveillon-peruibe-enhanced.jpg',
+  '/hopihari_live_cherry.jpeg',
+  '/fireworks-macau-tower.jpg',
 
 ]
 
@@ -37,53 +36,8 @@ export default function Page() {
 
   return (
     <main className={`flex min-h-screen flex-col`}>
-      <div className='mb-24'>
-
-      {/* <Body /> */}
+      <div className='mt-28 mb-24'>
         <Overlay label='A arte de encantar' width={dimensions.width} height={dimensions.height}/>
-        {/* <div className='flex mobile-flex-wrap flex-row justify-evenly items-center
-          w-full h-fit min-h-160px 
-          text-white bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
-          <div className='inline-flex flex-col justify-center p-10 h-full'>
-            <p className={`${worksans.className} italic text-2xl pb-10`}>A arte de encantar</p>
-            <p className='text-lg '>Somos o Grupo Flames, uma empresa especializada em efeitos especiais e pirotecnia.</p>
-          </div>
-          <div className='max-h-26 max-w-screen-lg min-w-96'>
-            <Image
-              src={"/fireworks-macau-tower.jpg"}
-              width={dimensions.width}
-              height={dimensions.height}
-              alt='HopiHari Live Commets'
-            />
-          </div>
-        </div> */}
-        <div className='
-        flex flex-col items-center justify-center text-white p-10 h-fit 
-        bg-gradient-to-b from-gray-950 via-gray-900 to-indigo-950
-        '
-        >
-            <p className={`${worksans.className} text-center italic text-2xl pb-10`}>Eventos</p>
-            <Carousel slides={slides} autoSlide={true} autoSlideInterval={1000}>
-            {
-              slides.map((slide, i) => {
-                if (i >= 2) {
-                  return (<Image
-                          key={i}
-                          src={slide}
-                          width={820}
-                          height={400}
-                          alt='carousel picture'
-                        />)
-                } else {
-                  return (
-                    <video  key={i} width={800} height={400} src={slide} autoPlay muted loop />
-                  )
-                }
-              })
-            }  
-          </Carousel>
-          <Link href="/portfolio" className='p-8 mt-10 bg-red-400 rounded-md'>Portfólio completo</Link>
-          </div>
         <div className='flex flex-col items-center w-full text-white p-10 h-fit bg-gray-900'>
           <p className={`${worksans.className} text-2xl`}>Nossa Missão</p>
           <Image
@@ -119,11 +73,37 @@ export default function Page() {
             <Link href="/estrutura" className='p-8 mt-10 bg-red-400 rounded-md'>Saiba mais</Link>
           </div>
         </div>
-
+        <div className='
+        flex flex-col items-center justify-center text-white p-10 h-fit 
+        bg-gradient-to-b from-gray-950 via-gray-900 to-indigo-950
+        '
+        >
+            <p className={`${worksans.className} text-center italic text-2xl pb-10`}>Eventos</p>
+            <Carousel slides={slides} autoSlide={true} autoSlideInterval={1000}>
+            {
+              slides.map((slide, i) => {
+                if (i >= 1) {
+                  return (<Image
+                          key={i}
+                          src={slide}
+                          width={dimensions.width}
+                          height={400}
+                          alt='carousel picture'
+                        />)
+                } else {
+                  return (
+                    <video  key={i} width={dimensions.width} height={400} src={slide} autoPlay muted loop />
+                  )
+                }
+              })
+            }  
+          </Carousel>
+          <Link href="/portfolio" className='p-8 mt-10 bg-red-400 rounded-md'>Portfólio completo</Link>
+        </div>
         <div  className='flex flex-col items-center w-full text-white p-10 h-fit bg-gray-900'>
           <p className={`${worksans.className} text-2xl`}>Lojas físicas</p>
           <p className='pt-10 text-center text-lg'>
-          Além da nossa área de efeitos especiais, temos também lojas físicas para<br /> revenda de produtos seguramente habilitados para o público
+          Além da nossa área de efeitos especiais, temos também lojas físicas para revenda<br /> de produtos seguramente habilitados para o público.
           </p>
 
           <div className='flex flex-row mobile-flex-wrap items-center w-full text-white p-10 h-fit '>

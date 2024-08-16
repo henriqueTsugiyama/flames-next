@@ -5,9 +5,9 @@ export default function Footer() {
     const year = date.getFullYear()
 
     return (
-        <footer className={`${styles.footer_container} text-red-800 text-lg`}>
-            <p>Copyright ©{year} Grupo Flames Pirotecnia</p>
-            <p>Desenvolvido por Henrique Tsugiyama</p>
+        <footer className={`${styles.footer_container} text-red-800 text-md`}>
+            <p className='text-left'>Copyright ©{year} Grupo Flames Pirotecnia</p>
+            <p className='text-right'>Desenvolvido por Henrique Tsugiyama</p>
         </footer>
     )
 }

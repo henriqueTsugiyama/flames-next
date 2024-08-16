@@ -38,11 +38,11 @@ export default function Carousel({
             <div className="absolute inset-0 p-4
             flex items-center justify-between
             ">
-                <button className="p-1 rounded-full shadow bg-white/80 hover:bg-white" onClick={previous}>
-                    <ArrowLeftIcon className="w-4 h-5" />
+                <button className="p-1 rounded-full shadow text-black bg-white/80 hover:bg-white" onClick={previous}>
+                    <ArrowLeftIcon className="flex items-center justify-center  w-4 h-6 pr-1" />
                 </button>
-                <button className='p-1 rounded-full shadow bg-white/80 hover:bg-white' onClick={next}>
-                    <ArrowRightIcon className="w-4 h-5" />
+                <button className='p-1 rounded-full shadow text-black bg-white/80 hover:bg-white' onClick={next}>
+                    <ArrowRightIcon className="flex items-center justify-center w-4 h-6 pr-1" />
                 </button>
             </div>
             <div className="absolute bottom-4 right-0 left-0">
