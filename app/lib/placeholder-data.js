@@ -1,4 +1,7 @@
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
+
+const { randomUUID } = require("crypto");
+
 // https://nextjs.org/learn/dashboard-app/fetching-data
 const users = [
   {
@@ -180,6 +183,31 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
+const products = [
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+]
+
+const categories = [
+  { id: '72046814-612f-4baf-8021-a431049f0c8f', name: 'Tortas calibre alto', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: '551ce3f2-ad13-48c8-b797-93b622cafcc2', name: 'Tortas calibre baixo', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: 'a5221f27-ead1-42da-97ce-8a465889b0ff', name: 'Baixo ruído', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: 'd85a0ea9-be70-4698-9eb9-3e242be78b08', name: 'Girândolas', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: '0c76c001-7560-4b8e-80df-1fa84ffe1db4', name: 'Fumaças', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: '3c29a2b1-a367-4dfa-9966-f3f65bc53c3c', name: 'Chá revelação', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: 'cb730513-2bce-4c9a-8b15-098c4485adc6', name: 'Infanto juvenil', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: '02846b27-5d47-414e-840e-b819e06ee4d3', name: 'Lança papéis', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: 'ee703884-c7f5-4b10-b735-5a8e1fda21b6', name: 'Velas', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: 'c8425d44-4d3a-4755-84ad-56bd0e3e70a3', name: 'Rojões de vara', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+  { id: 'f21b4046-9e54-4dbc-bb0e-3519904c9513', name: 'Rojões (Monotubos)', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null },
+]
 module.exports = {
   users,
   customers,

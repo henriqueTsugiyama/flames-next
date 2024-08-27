@@ -15,7 +15,10 @@
 }
 
 .navbar_sticky {
+    /* transition: background 400ms ease-in-out position 400ms ease-in-out; */
+    /* position: fixed; */
     transition: background 400ms ease-in-out;
+
     background: var(--background-dark-transparent);
 }
 

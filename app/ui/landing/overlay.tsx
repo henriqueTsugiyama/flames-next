@@ -1,6 +1,16 @@
+import Image from "next/image"
 import { montserrat, worksans } from "../fonts"
 
-export default function Overlay({label, height, width}: { label: string, height: number, width: number}) {
+export default function Overlay({label, description, url, isVideo, height, width, alt = 'Oops, não foi possível encontrar seu conteúdo.'}:
+    {
+        label: string,
+        description: string,
+        url: string,
+        isVideo: boolean,
+        height: number,
+        width: number,
+        alt?: string
+    }) {
     return (
         <div className={`flex grow flex-col relative items-center gap-4 overlay md:flex-column bg-black max-w-1920px max-h-675px`}>
             <div className={`bg-black/[.6] inline-flex flex-col items-center justify-center absolute
@@ -8,11 +18,14 @@ export default function Overlay({label, height, width}: { label: string, height:
                 z-0 w-full h-full`}>
                 {label}
                 <p className={`${montserrat.className} text-xl text-center mt-10`}>
-                    Somos o Grupo Flames, uma empresa especializada <br />
-                    em efeitos especiais e pirotecnia.
+                 {description}
                 </p>
             </div>
-            <video width={width} height={height} src={'/videos/hotel_nacional2019_cascata.mp4'} autoPlay muted loop />
+            {!isVideo ?     
+            <video width={width} height={height} src={url} autoPlay muted loop />
+            :
+            <Image src={url} width={width} height={height} alt=""/>
+            }
       </div>
     )
 }

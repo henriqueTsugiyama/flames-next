@@ -1,5 +1,5 @@
 .footer_container {
-    background: black;
+    background: var(--background-dark);
     display: flex;
     flex-direction: row;
     justify-content: space-between;

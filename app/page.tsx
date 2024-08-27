@@ -7,6 +7,7 @@ import Contact from './ui/forms/contact';
 import { useEffect, useState } from "react"
 import { worksans } from './ui/fonts';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 const slides = [
   '/videos/hotel_nacional2019_fogos.mp4',
@@ -36,8 +37,12 @@ export default function Page() {
 
   return (
     <main className={`flex min-h-screen flex-col`}>
-      <div className='mt-28 mb-24'>
-        <Overlay label='A arte de encantar' width={dimensions.width} height={dimensions.height}/>
+      <div className='my-24'>
+        <Overlay label='A arte de encantar'
+        description='Somos o Grupo Flames, uma empresa \nespecializada em efeitos especiais e pirotecnia.'
+        isVideo={false}
+        url={'/videos/hotel_nacional2019_cascata.mp4'}
+        width={dimensions.width} height={dimensions.height}/>
         <div className='flex flex-col items-center w-full text-white p-10 h-fit bg-gray-900'>
           <p className={`${worksans.className} text-2xl`}>Nossa Missão</p>
           <Image
@@ -48,7 +53,7 @@ export default function Page() {
             className='pt-10'
           />
           <p className='pt-10 text-center text-lg'>
-          Desde 1985 sem acidentes de trabalho, nos compromissamos<br />
+          Desde 1985 atuando no mercado, nos compromissamos<br />
           a entregar seu serviço prezando pelas melhores práticas<br />
           de segurança e agregar valor ao seu evento.
           </p>
@@ -62,16 +67,27 @@ export default function Page() {
             height={dimensions.height}
             alt='40 anos de experiência'
           />
-          <div className='inline-flex flex-col items-start p-8 h-fit'>
-            <p className={`${worksans.className} text-2xl`}>Tecnologia</p>
-            <p className='py-10 text-left text-lg'>
-            Usamos diversos sistemas e tecnologias de ponta para operar os efeitos.<br />
-            Nossa equipe técnica especializada, está pronta para<br />
-            te atender e direcionar em diversas situações.
-            </p>
-
-            <Link href="/estrutura" className='p-8 mt-10 bg-red-400 rounded-md'>Saiba mais</Link>
-          </div>
+            <div
+                className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
+                {
+                    'items-start': dimensions.width > 780,
+                    'items-center': dimensions.width < 780,
+                }
+                )}>
+                    <p className={`${worksans.className} text-2xl`}>Tecnologia</p>
+                    <p className={clsx('py-10 text-lg',
+                    {
+                        'text-left': dimensions.width > 780,
+                        'text-center': dimensions.width < 780,
+                    }
+                    )}>
+                        Usamos diversos sistemas e tecnologias
+                        de ponta para operar os efeitos. <br />
+                        Nossa equipe técnica especializada, está pronta para te atender
+                        e direcionar em diversas situações.
+                    </p>
+                    <Link href="/estrutura" className='p-8 mt-6 mb-8 bg-red-400 rounded-md'>Saiba mais</Link>
+                </div>
         </div>
         <div className='
         flex flex-col items-center justify-center text-white p-10 h-fit 
