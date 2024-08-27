@@ -12,16 +12,16 @@ export default function Page() {
         height: 0,
       });
     const mobileScreenSize = 780
-    
-      useEffect(() => {
+    const urls = ['/equipment/firetek-left-view.jpg', '/equipment/firetek-right-view.jpg', '/equipment/firetek-front.jpg']
+    useEffect(() => {
         setDimensions({ width: window.innerWidth, height: window.innerHeight });
         const handleResize = () => {
-          setDimensions({ width: window.innerWidth, height: window.innerHeight });
+            setDimensions({ width: window.innerWidth, height: window.innerHeight });
         };
         window.addEventListener("resize", handleResize);
-    
+
         return () => window.removeEventListener("resize", handleResize);
-      }, []);
+    }, []);
     return (
         <main className={`flex flex-col min-h-screen`}>
             <div className='mt-20 mb-24'>
@@ -31,32 +31,17 @@ export default function Page() {
                     w-full h-fit min-h-160px 
                     text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
                     <Overlay
-                    label=''
+                    label='Tecnologia'
                     description=""
-                    url='/equipment/firetek-left-view.jpg'
-                    isVideo={true}
-                    width={dimensions.width/2}
+                    urls={urls}
+                    isVideo={false}
+                    width={dimensions.width}
                     height={dimensions.height}
                     />
-                    {/* {/* <Image
-                    src={"/equipment/firetek-left-view.jpg"}
-                    width={dimensions.width > mobileScreenSize ? dimensions.width/4 : dimensions.width}
-                    height={dimensions.height}
-                    alt='40 anos de experiência'
-                    className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    /> */}
-                    <Image
-                    src={"/equipment/firetek-right-view.jpg"}
-                    width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
-                    height={dimensions.height}
-                    alt='40 anos de experiência'
-                    className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    /> 
                 </div>
                 <div className='flex flex-col items-center w-full text-white p-10 h-fit bg-gray-900'>
-                    <p className={`${worksans.className} text-2xl`}>Tecnologia</p>
                     <Image
-                    src={"/undraw_visionary_technology.svg"}
+                    src={"/undraw_drone_surveillance.svg"}
                     width={240}
                     height={150}
                     alt='40 anos de experiência'
@@ -72,9 +57,9 @@ export default function Page() {
                     w-full h-fit min-h-160px 
                     text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
                     <Image
-                    src={"/co2-aesul.jpg"}
+                    src={"/balsa-montagem.jpg"}
                     width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
-                    height={dimensions.height}
+                    height={dimensions.height > mobileScreenSize ? dimensions.height/2 : dimensions.height}
                     alt='40 anos de experiência'
                     className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
                     />
@@ -96,6 +81,44 @@ export default function Page() {
                             Todos, devidamente autorizados pela Marinha e munícipio de cada região.
                         </p>
                     </div>
+                </div>
+                <div className='flex mobile-flex-wrap flex-row justify-betweeen items-center
+                    w-full h-fit min-h-160px 
+                    text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
+                    {dimensions.width < mobileScreenSize &&
+                    <Image
+                        src={"/hopi-hari-heart.jpg"}
+                        width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
+                        height={dimensions.height}
+                        alt='40 anos de experiência'
+                        className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
+                    />}
+                    <div
+                    className={clsx('inline-flex flex-col w-full p-10 h-fit',
+                    {
+                        'items-end': dimensions.width > mobileScreenSize,
+                        'items-center': dimensions.width < mobileScreenSize,
+                    }
+                    )}>
+                        <p className={`${worksans.className} text-2xl`}>Estruturas personalizadas</p>
+                        <p className={clsx('py-10 text-lg',
+                        {
+                            'text-right': dimensions.width > mobileScreenSize,
+                            'text-center': dimensions.width < mobileScreenSize,
+                        }
+                        )}>    
+                        Sempre analisamos as demandas, para tentar atende-las de diversas maneiras. 
+                        Podendo criar estruturas personalizadas, que são utilizadas em conjunto com os efeitos
+                        </p>
+                    </div>
+                    {dimensions.width > mobileScreenSize &&
+                    <Image
+                        src={"/hopi-hari-heart.jpg"}
+                        width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
+                        height={dimensions.height}
+                        alt='40 anos de experiência'
+                        className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
+                    />}
                 </div>
             </div>
         </main>

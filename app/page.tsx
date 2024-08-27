@@ -40,8 +40,8 @@ export default function Page() {
       <div className='my-24'>
         <Overlay label='A arte de encantar'
         description='Somos o Grupo Flames, uma empresa \nespecializada em efeitos especiais e pirotecnia.'
-        isVideo={false}
-        url={'/videos/hotel_nacional2019_cascata.mp4'}
+        isVideo={true}
+        urls={['/videos/hotel_nacional2019_cascata.mp4']}
         width={dimensions.width} height={dimensions.height}/>
         <div className='flex flex-col items-center w-full text-white p-10 h-fit bg-gray-900'>
           <p className={`${worksans.className} text-2xl`}>Nossa Missão</p>
