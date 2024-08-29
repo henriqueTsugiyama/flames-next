@@ -89,3 +89,10 @@ svg {
 svg:hover {
   color: #ffea00;
 }
+
+.grid-column-wrapper {
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  max-width: 100% !important;
+}

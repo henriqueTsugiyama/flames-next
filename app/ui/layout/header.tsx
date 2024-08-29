@@ -60,20 +60,21 @@ export default function Header() {
                         alt="Screenshots of the dashboard project showing desktop version"
                         />
                     </div>
-                    <div className="flex justify-end items-center flex-row w-3/4 text-xl font-bold color-normal">
+                    <div className="flex justify-end items-center flex-row w-1/2 text-xl font-bold color-normal">
                         <Link href="/" className="rounded-md px-3  ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Home</Link>
-                        <Link href="/empresa" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Empresa</Link>
+                        {/* <Link href="/empresa" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Empresa</Link> */}
                         <Link href="/portfolio" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Portfólio</Link>
                         <Link href="/estrutura" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Estrutura</Link>
                         <Link href="/loja" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Loja</Link>
                         <Link href="/contato" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Contato</Link>
-                        <p className="font-bold px-5"> | </p>
+                        <p className="font-bold pl-4"> | </p>
                         <a href="https://www.instagram.com/flamespirotecnia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="/blank">
                             <Image
                                 src="/icons-instagram.svg"
                                 height={35}
                                 width={35}
-                                alt="Whatsapp"
+                                alt="Instagram"
+                                className="ml-8"
                             />
                         </a>
                         <a href={`https://api.whatsapp.com/send?phone=5511999403978&text=${whatsappDefaultMessage}`} target="#blank" className="text-white">
@@ -82,7 +83,7 @@ export default function Header() {
                                 height={35}
                                 width={35}
                                 alt="Whatsapp"
-                                className="ml-6"
+                                className="ml-8"
                             />
                         </a>
                     </div>

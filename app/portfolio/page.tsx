@@ -41,178 +41,111 @@ export default function Page() {
                     </p>
                 </div>
                 {/* Sections */}
-                <div className='flex mobile-flex-wrap flex-row justify-betweeen items-center
-                    w-full h-fit min-h-160px 
-                    text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
-                    <Image
-                    src={"/hopihari-fireworks.jpg"}
-                    width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
-                    height={dimensions.height}
-                    alt='40 anos de experiência'
-                    className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    />
-                    <div
-                    className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
-                    {
-                        'items-start': dimensions.width > mobileScreenSize,
-                        'items-center': dimensions.width < mobileScreenSize,
-                    }
-                    )}>
-                        <p className={`${worksans.className} text-2xl`}>Pirotecnia</p>
-                        <p className={clsx('py-10 text-lg',
-                        {
-                            'text-left': dimensions.width > mobileScreenSize,
-                            'text-center': dimensions.width < mobileScreenSize,
-                        }
-                        )}>
-                            Usamos diversos sistemas e tecnologias
-                            de ponta para operar os efeitos. <br />
-                            Nossa equipe técnica especializada, está pronta para te atender
-                            e direcionar em diversas situações.
-                        </p>
+                <div className='grid-column-wrapper'>
+                    <div className='relative'>                
+                        <div className='absolute w-full h-full
+                        flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
+                        transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
+                        '>
+                            <p className={`${worksans.className} text-xl`}>Pirotecnia</p>
+                            <p className='p-8 text-md text-center'>
+                            Fazemos shows pirotécnicos, tanto de shows independentes sem sistema de iluminação e luzes, como também integrados em um sistema junto a outros artistas.
+                            </p>
+                        </div>
+                        <Image
+                        src={"/hopihari-fireworks.jpg"}
+                        width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
+                        height={dimensions.height}
+                        alt='40 anos de experiência'
+                        />
+                    </div>
+                    <div className='relative'>                
+                        <div className='absolute w-full h-full
+                        flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
+                        transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
+                        '>
+                            <p className={`${worksans.className} text-xl`}>Cascatas</p>
+                            <p className='p-8  text-md text-center'>
+                            Ainda dentro de pirotecnia, temos nossos efeitos de cascatas perfeitos para iluminar eventos e destacar painéis de patrocinadores, marcas, e times. 
+                            </p>
+                        </div>
+                        <Image
+                        src={"/cascata-cananeia.jpg"}
+                        width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
+                        height={dimensions.height}
+                        alt='40 anos de experiência'
+                        />
+                    </div>
+                    <div className='relative'>                
+                        <div className='absolute w-full h-full
+                        flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
+                        transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
+                        '>
+                            <p className={`${worksans.className} text-xl`}>Fire Machine</p>
+                            <p className='p-8  text-md text-center'>
+                            Muito usado em shows em palco, temos nosso maquinário próprio para o efeito de chamas.
+                            </p>
+                        </div>
+                        <Image
+                        src={"/firemachine-generic.jpg"}
+                        width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
+                        height={dimensions.height}
+                        alt='40 anos de experiência'
+                        />
                     </div>
                 </div>
 
-                <div className='flex mobile-flex-wrap flex-row justify-betweeen items-center
-                    w-full h-fit min-h-160px 
-                    text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
-                    {dimensions.width < mobileScreenSize &&
-                    <Image
-                        src={"/firemachine-generic.jpg"}
-                        width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
+                <div className='grid-column-wrapper'>
+                    <div className='relative'>                
+                        <div className='absolute w-full h-full
+                        flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
+                        transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
+                        '>
+                            <p className={`${worksans.className} text-xl`}>Skypaper</p>
+                            <p className='p-8 text-md text-center'>
+                            Famoso por ser usado em datas comemorativas e eventos de celebração, temos equipamentos para realizar efeitos de skypaper em diversas cores.
+                            </p>
+                        </div>
+                        <Image
+                        src={"/iguape-skypaper.jpg"}
+                        width={dimensions.width > mobileScreenSize ? dimensions.width : dimensions.width}
                         height={dimensions.height}
                         alt='40 anos de experiência'
-                        className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    />}
-                    <div
-                        className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
-                        {
-                            'items-start': dimensions.width > mobileScreenSize,
-                            'items-center': dimensions.width < mobileScreenSize,
-                        }
-                    )}>
-                        <p className={`${worksans.className} text-2xl`}>Máquina de chamas</p>
-                        <p className={clsx('py-10 text-lg',
-                        {
-                            'text-left': dimensions.width > mobileScreenSize,
-                            'text-center': dimensions.width < mobileScreenSize,
-                        }
-                        )}>
-                            Usamos diversos sistemas e tecnologias
-                            de ponta para operar os efeitos. <br />
-                            Nossa equipe técnica especializada, está pronta para te atender
-                            e direcionar em diversas situações.
-                        </p>
+                        />
                     </div>
-                    {dimensions.width > mobileScreenSize &&
-                    <Image
-                        src={"/firemachine-generic.jpg"}
+                    <div className='relative'>                
+                        <div className='absolute w-full h-full
+                        flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
+                        transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
+                        '>
+                            <p className={`${worksans.className} text-xl`}>Serpentinas</p>
+                            <p className='p-8  text-md text-center'>
+                            Na mesma linha de skypaper, temos nossa linha de serpentinas. Usada em situações bem parecidas
+                            </p>
+                        </div>
+                        <Image
+                        src={"/serpentinas-rogerio-ceni.jpg"}
                         width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
                         height={dimensions.height}
                         alt='40 anos de experiência'
-                        className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    />}
-                </div>
-                <div className='flex mobile-flex-wrap flex-row justify-betweeen items-center
-                    w-full h-fit min-h-160px 
-                    text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
-                    <Image
-                    src={"/co2-aesul.jpg"}
-                    width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
-                    height={dimensions.height}
-                    alt='40 anos de experiência'
-                    className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    />
-                    <div
-                    className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
-                    {
-                        'items-start': dimensions.width > mobileScreenSize,
-                        'items-center': dimensions.width < mobileScreenSize,
-                    }
-                    )}>
-                        <p className={`${worksans.className} text-2xl`}>CO2</p>
-                        <p className={clsx('py-10 text-lg',
-                        {
-                            'text-left': dimensions.width > mobileScreenSize,
-                            'text-center': dimensions.width < mobileScreenSize,
-                        }
-                        )}>
-                            Usamos diversos sistemas e tecnologias
-                            de ponta para operar os efeitos. <br />
-                            Nossa equipe técnica especializada, está pronta para te atender
-                            e direcionar em diversas situações.
-                        </p>
+                        />
                     </div>
-                </div>
-                <div className='flex mobile-flex-wrap flex-row justify-betweeen items-center
-                    w-full h-fit min-h-160px 
-                    text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
-                    {dimensions.width < mobileScreenSize && 
-                    <Image
-                        src={"/cascata-cananeia.jpg"}
+                    <div className='relative'>                
+                        <div className='absolute w-full h-full
+                        flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
+                        transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
+                        '>
+                            <p className={`${worksans.className} text-xl`}>CO2</p>
+                            <p className='p-8 text-md text-center'>
+                            Máquinas de CO2 para operar em concertos, festas e eventos particulares.
+                            </p>
+                        </div>
+                        <Image
+                        src={"/co2-aesul.jpg"}
                         width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
                         height={dimensions.height}
                         alt='40 anos de experiência'
-                        className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    />}
-                    <div
-                    className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
-                    {
-                        'items-start': dimensions.width > mobileScreenSize,
-                        'items-center': dimensions.width < mobileScreenSize,
-                    }
-                    )}>
-                        <p className={`${worksans.className} text-2xl`}>Cascatas</p>
-                        <p className={clsx('py-10 text-lg',
-                        {
-                            'text-left': dimensions.width > mobileScreenSize,
-                            'text-center': dimensions.width < mobileScreenSize,
-                        }
-                        )}>
-                            Usamos diversos sistemas e tecnologias
-                            de ponta para operar os efeitos. <br />
-                            Nossa equipe técnica especializada, está pronta para te atender
-                            e direcionar em diversas situações.
-                        </p>
-                    </div>
-                    {dimensions.width > mobileScreenSize && 
-                    <Image
-                        src={"/cascata-cananeia.jpg"}
-                        width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
-                        height={dimensions.height}
-                        alt='40 anos de experiência'
-                        className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    />}
-                </div>
-                <div className='flex mobile-flex-wrap flex-row justify-betweeen items-center
-                    w-full h-fit min-h-160px 
-                    text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
-                    <Image
-                    src={"/skypaper-ambipar.jpg"}
-                    width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
-                    height={dimensions.height}
-                    alt='40 anos de experiência'
-                    className={`${dimensions.width > mobileScreenSize ? 'w-1/2' : ''}`}
-                    />
-                    <div
-                    className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
-                    {
-                        'items-start': dimensions.width > mobileScreenSize,
-                        'items-center': dimensions.width < mobileScreenSize,
-                    }
-                    )}>
-                        <p className={`${worksans.className} text-2xl`}>Skypaper</p>
-                        <p className={clsx('py-10 text-lg',
-                        {
-                            'text-left': dimensions.width > mobileScreenSize,
-                            'text-center': dimensions.width < mobileScreenSize,
-                        }
-                        )}>
-                            Usamos diversos sistemas e tecnologias
-                            de ponta para operar os efeitos. <br />
-                            Nossa equipe técnica especializada, está pronta para te atender
-                            e direcionar em diversas situações.
-                        </p>
+                        />
                     </div>
                 </div>
             </div>
