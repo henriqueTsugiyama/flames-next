@@ -185,14 +185,14 @@ const revenue = [
 
 const products = [
   { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
-  { id: randomUUID(),  cateogry_id: 10, name: 'Torta 25tb. Chá Revelação',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Torta Zenit',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Folha seca',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Chuva de prata',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Rojão de Vara Colorido',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Rojão de Vara Folha seca',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Fumaça de bastão',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Fumaça de lata',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
+  { id: randomUUID(),  cateogry_id: 10, name: 'Girândola 3600 cores',  description: 'Abertura Colorida Rosa, Azul, Verde – Composição : 25 tubos de 37mm – Altura média alcançada : 30 metros Classe : C', embed: '', image_url: '', created_at: new Date().toISOString(), updated_at: new Date().toISOString(), deleted: null},
 ]
 
 const categories = [
@@ -213,4 +213,5 @@ module.exports = {
   customers,
   invoices,
   revenue,
+  products
 };

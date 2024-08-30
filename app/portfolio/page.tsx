@@ -3,8 +3,6 @@
 import Image from 'next/image';
 import { worksans } from '../ui/fonts';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import clsx from 'clsx';
 
 export default function Page() {
     const [dimensions, setDimensions] = useState({
@@ -41,7 +39,7 @@ export default function Page() {
                     </p>
                 </div>
                 {/* Sections */}
-                <div className='grid-column-wrapper'>
+                <div className='grid-column-wrapper-gap-1'>
                     <div className='relative'>                
                         <div className='absolute w-full h-full
                         flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
