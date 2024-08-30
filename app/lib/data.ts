@@ -7,6 +7,7 @@ import {
   LatestInvoiceRaw,
   User,
   Revenue,
+  ProductFields,
 } from './definitions';
 import { formatCurrency } from './utils';
 
@@ -186,7 +187,20 @@ export async function fetchCustomers() {
     throw new Error('Failed to fetch all customers.');
   }
 }
+export async function fetchProducts() {
+  try {
+    const data = await sql<ProductFields>`
+      SELECT * FROM products
+      ORDER BY name ASC
+    `;
 
+    const products = data.rows;
+    return products;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch all products.');
+  }
+}
 export async function fetchFilteredCustomers(query: string) {
   try {
     const data = await sql<CustomersTableType>`

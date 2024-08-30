@@ -1,10 +1,9 @@
 import { worksans } from '../ui/fonts';
-import { products } from '../lib/placeholder-data'
-import { fetchCardData } from '../lib/data';
+import { fetchProducts } from '../lib/data';
 import Image from 'next/image';
 
 export default async function Page() {
-    const { numberOfCustomers } = await fetchCardData()
+    const products = await fetchProducts()
 
     return (
         <main className={`flex flex-col min-h-screen`}>
@@ -12,8 +11,9 @@ export default async function Page() {
                 <div className='flex flex-col  justify-center items-center '>
                     <p className={`${worksans.className} text-2xl`}>Loja</p>
                     <p className='py-10 text-center text-lg max-w-screen-lg'>
-                        Nessa seção temos um catálogo dos nossos produtos habilitados para venda ao público. Lembrando que não realizamos vendas por e-commerce,
-                        a venda de produtos e artigos pirotécnicos é proibida pela internet. Esses produtos só podem ser retirados em uma de nossas lojas.
+                        Nessa seção temos um catálogo dos nossos produtos habilitados para venda ao público. <br />
+                        Lembrando que não realizamos vendas por e-commerce,
+                        a venda de produtos e artigos pirotécnicos é proibida pela internet. Esses produtos só podem ser retirados em uma de nossas lojas físicas.
                     </p>
                 </div>
                 <div className='grid-column-wrapper-gap-2'>
@@ -23,18 +23,19 @@ export default async function Page() {
                                 <div className='
                                 min-h-96 rounded-lg
                                 shadow-lg shadow-gray-600/50
-                                bg-indigo-100'>
+                                bg-indigo-100'
+                                >
                                     <div className='absolute w-full h-full
-                                        flex flex-col items-center justify-center bg-transparent text-transparent rounded-lg
-                                        transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
-                                        hover:cursor-pointer
+                                    flex flex-col items-center justify-center bg-transparent text-transparent rounded-lg
+                                    transition ease-in-out delay-800 hover:bg-gray-800/[.6] hover:text-slate-50
+                                    hover:cursor-pointer
                                     '>
-                                        <p className={`${worksans.className} text-xl`}>Cascatas</p>
-                                        <p className='p-8  text-md text-center'>
+                                        <p className={`${worksans.className} text-xl`}>Veja mais</p>
+                                        {/* <p className='p-8  text-md text-center'>
                                         Ainda dentro de pirotecnia, temos nossos efeitos de cascatas perfeitos para iluminar eventos e destacar painéis de patrocinadores, marcas, e times. 
-                                        </p>
+                                        </p> */}
                                     </div>
-                                    <div className='flex flex-col items-center p-4'>
+                                    <div className='flex flex-col items-center p-4 h-full'>
                                         <p className={`${worksans.className} text-lg pb-6`}>{product.name}</p>
                                         <Image
                                         src={"/undraw_visionary_technology.svg"}
@@ -43,7 +44,8 @@ export default async function Page() {
                                         alt='40 anos de experiência'
                                         className='pb-10'
                                         />
-                                        <p className='text-center'>{product.description}</p>
+                                        <p className='text-left'> R$ {product.sales_price}</p>
+                                        <p className='text-left'>{product.description}</p>
                                     </div>
                                 </div>
                             </div>
