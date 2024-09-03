@@ -201,6 +201,20 @@ export async function fetchProducts() {
     throw new Error('Failed to fetch all products.');
   }
 }
+export async function fetchProductById(id: string) {
+  try {
+    const data = await sql<ProductFields>`
+      SELECT * FROM products
+      where id = ${id}
+    `;
+
+    const products = data.rows;
+    return products[0];
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch all products.');
+  }
+}
 export async function fetchFilteredCustomers(query: string) {
   try {
     const data = await sql<CustomersTableType>`

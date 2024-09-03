@@ -93,7 +93,7 @@ export default function Page() {
                     </div>
                 </div>
 
-                <div className='grid-column-wrapper'>
+                <div className='grid-column-wrapper-gap-1'>
                     <div className='relative'>                
                         <div className='absolute w-full h-full
                         flex flex-col items-center justify-center bg-transparent text-transparent rounded-md
@@ -142,7 +142,7 @@ export default function Page() {
                         src={"/co2-aesul.jpg"}
                         width={dimensions.width > mobileScreenSize ? dimensions.width/2 : dimensions.width}
                         height={dimensions.height}
-                        alt='40 anos de experiência'
+                        alt='/Máquina de CO2'
                         />
                     </div>
                 </div>

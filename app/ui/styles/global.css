@@ -103,3 +103,7 @@ svg:hover {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   max-width: 100% !important;
 }
+
+.height-min-400 {
+  min-height: 402px;
+}
