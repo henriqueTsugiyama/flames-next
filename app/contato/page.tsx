@@ -133,7 +133,7 @@ export default function Page() {
 
           <div className="mt-6 text-center">
             <p>Whatsapp</p>
-            <a href={`https://api.whatsapp.com/send?phone=55119711004618&text=Olá, tudo bom?`} target="#blank" className="text-white">
+            <a href={`https://api.whatsapp.com/send?phone=5511971100461&text=Olá, tudo bom?`} target="#blank" className="text-white">
               <Image
                   src="/icons-whatsapp.svg"
                   height={35}
