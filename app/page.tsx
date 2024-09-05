@@ -36,10 +36,9 @@ export default function Page() {
   }, []);
 
   return (
-    <main className={`flex min-h-screen flex-col`}>
-      <div className='my-24'>
+      <div className=''>
         <Overlay label='A arte de encantar'
-        description='Somos o Grupo Flames, uma empresa \nespecializada em efeitos especiais e pirotecnia.'
+        description='Somos o Grupo Flames, uma empresa especializada em efeitos especiais e pirotecnia.'
         isVideo={true}
         urls={['/videos/hotel_nacional2019_cascata.mp4']}
         width={dimensions.width} height={dimensions.height}/>
@@ -232,6 +231,5 @@ export default function Page() {
           <Contact />
         </div>
       </div>
-    </main>
   );
 }

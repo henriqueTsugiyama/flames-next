@@ -23,9 +23,7 @@ export default function Page() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
     return (
-        <main className={`flex flex-col min-h-screen`}>
-            <div className='mt-20 mb-24'>
-              
+            <div className=''>
                 {/* Sections */}
                 <div className='flex mobile-flex-wrap flex-row justify-betweeen items-center
                     w-full h-fit min-h-160px 
@@ -121,6 +119,5 @@ export default function Page() {
                     />}
                 </div>
             </div>
-        </main>
     )
 }

@@ -13,7 +13,11 @@ export default function RootLayout({
     <html lang="en">
       <body id='page-container' className={`${montserrat.className} antialiased`}>
           <Header />
-          <>{children}</>
+          <main className={`flex flex-col min-h-screen`}>
+            <div className='mt-24 mb-24 bg-gray-900'>
+              {children}
+            </div>
+          </main>
           <Footer/>
       </body>
     </html>

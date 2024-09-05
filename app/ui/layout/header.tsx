@@ -71,21 +71,21 @@ export default function Header() {
                         <a href="https://www.instagram.com/flamespirotecnia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="/blank">
                             <Image
                                 src="/icons-instagram.svg"
-                                height={35}
-                                width={35}
+                                height={40}
+                                width={40}
                                 alt="Instagram"
                                 className="ml-8"
                             />
                         </a>
-                        <a href={`https://api.whatsapp.com/send?phone=5511999403978&text=${whatsappDefaultMessage}`} target="#blank" className="text-white">
-                            <Image
-                                src="/icons-whatsapp.svg"
-                                height={35}
-                                width={35}
-                                alt="Whatsapp"
-                                className="ml-8"
-                            />
-                        </a>
+                        <a href={`https://www.facebook.com/flamespirotecnia`} target="#blank" className="text-white">
+                        <Image
+                            src="/icons-facebook.svg"
+                            height={35}
+                            width={35}
+                            alt="Facebook"
+                            className="ml-8"
+                        />
+                    </a>
                     </div>
                 </div>
 
@@ -124,17 +124,17 @@ export default function Header() {
 
                         />
                     </a>
-                    <a href={`https://api.whatsapp.com/send?phone=5511999403978&text=${whatsappDefaultMessage}`} target="#blank" className="text-white">
+                     <a href={`https://www.facebook.com/flamespirotecnia`} target="#blank" className="text-white">
                         <Image
-                            src="/icons-whatsapp.svg"
+                            src="/icons-facebook.svg"
                             height={35}
                             width={35}
-                            alt="Whatsapp"
+                            alt="Facebook"
                             className="ml-6"
                         />
                     </a>
                 </div>
-        </div>
+            </div>
       </div>
     )
 }
