@@ -1,11 +1,24 @@
+'use client'
 import { worksans } from '../ui/fonts';
-import { fetchProducts } from '../lib/data';
+import { fetchCategories, fetchProducts } from '../lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { CategoryFields, ProductFields } from '../lib/definitions';
 
 export default async function Page() {
-    const products = await fetchProducts()
+    const [products, setProducts] = useState<ProductFields[]>([])
+    const [categories, setCategories] = useState<CategoryFields[]>([])
+    const [catSelected, setCatSelected] = useState<CategoryFields>()
+    
+    useEffect(() => {
+        fetchProducts().then(pdts => setProducts(pdts))
+         fetchCategories().then(cats => setCategories(cats))
+    }, [])
 
+    useEffect(() => {
+        fetchProducts().then(pdts => setProducts(pdts))
+    }, [])
     return (
         <div className='p-8 bg-indigo-200'>
             <div className='flex flex-col  justify-center items-center '>
@@ -17,6 +30,12 @@ export default async function Page() {
                     </b>
                 </p>
             </div>
+            <label htmlFor="categories">Selecione por categoria:</label>
+            <select name="categories" id="choose-category">
+                {categories.map((category, key) => (
+                    <option value={category.id} key={key}>{category.name}</option>
+                ))}
+            </select>
             <div className='grid-column-wrapper-gap-2'>
                 {
                     products.map((product, key) => (

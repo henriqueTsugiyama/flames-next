@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import { QueryResult, sql } from '@vercel/postgres';
 import {
   CustomerField,
   CustomersTableType,
@@ -8,6 +8,7 @@ import {
   User,
   Revenue,
   ProductFields,
+  CategoryFields,
 } from './definitions';
 import { formatCurrency } from './utils';
 
@@ -185,6 +186,30 @@ export async function fetchCustomers() {
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch all customers.');
+  }
+}
+
+export async function fetchCategories(id?: string) {
+  try {
+    let data: QueryResult<CategoryFields>;
+
+    if (id != null) {
+      data = await sql<CategoryFields>`
+      SELECT * FROM categories where  id = ${id}
+      ORDER BY name ASC
+    `;
+    } else {
+      data = await sql<CategoryFields>`
+        SELECT * FROM categories
+        ORDER BY name ASC
+      `;
+    }
+
+    const categories = data.rows;
+    return categories;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch all categories.');
   }
 }
 export async function fetchProducts() {

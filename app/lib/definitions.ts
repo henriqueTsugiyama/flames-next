@@ -101,3 +101,12 @@ export type ProductFields =   {
   updated_at: Date;
   deleted: Date | null;
 }
+
+
+export type CategoryFields = {
+  id: string;
+  name: string;
+  created_at: Date;
+  updated_at: Date;
+  deleted: Date | null;
+}
