@@ -61,10 +61,10 @@ export default function Page() {
           w-full h-fit min-h-160px 
           text-white  bg-gradient-to-r from-red-950 via-indigo-950 to-gray-900'>
           <Image
-            src={"/fireworks_setup.jpg"}
+            src={"/equipment_setup.jpg"}
             width={dimensions.width > 780 ? dimensions.width/2 : dimensions.width}
             height={dimensions.height}
-            alt={"/undraw_fireworks.svg"}
+            alt='40 anos de experiência'
           />
             <div
                 className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
