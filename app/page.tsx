@@ -64,7 +64,7 @@ export default function Page() {
             src={"/fireworks_setup.jpg"}
             width={dimensions.width > 780 ? dimensions.width/2 : dimensions.width}
             height={dimensions.height}
-            alt='40 anos de experiência'
+            alt={"/undraw_fireworks.svg"}
           />
             <div
                 className={clsx('inline-flex flex-col items-start w-full p-10 h-fit',
