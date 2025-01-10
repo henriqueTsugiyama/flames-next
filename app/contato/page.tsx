@@ -28,12 +28,12 @@ export default function Page() {
       </p>
 
       <p className={`${worksans.className} text-2xl pt-10`}>Mídias</p>
-      <div className="flex flex-row justify-evenly pt-6 w-1/2 ">
+      <div className="flex flex-row justify-center align center pt-6 w-full ">
         <a href="https://www.instagram.com/flamespirotecnia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="/blank">
             <Image
                 src="/icons-instagram.svg"
-                height={60}
-                width={60}
+                height={dimensions.width < 600 ? dimensions.height * 0.12 : dimensions.height * 0.05}
+                width={dimensions.width < 600 ? dimensions.width * 0.12 :  dimensions.width * 0.05 }
                 alt="Instagram"
                 className=""
 
@@ -42,20 +42,20 @@ export default function Page() {
         <a href={`https://www.facebook.com/flamespirotecnia`} target="#blank" className="text-white">
             <Image
                 src="/icons-facebook.svg"
-                height={50}
-                width={50}
+                height={dimensions.width < 600 ? dimensions.height * 0.12 : dimensions.height * 0.05}
+                width={dimensions.width < 600 ? dimensions.width * 0.12 :  dimensions.width * 0.05 }
                 alt="Whatsapp"
-                className="ml-6"
+                className="mx-10"
             />
         </a>
 
         <a href={`https://youtube.com/@flamespirotecnia1703?si=Zqvt8wyNIqc55l9h`} target="#blank" className="text-white">
             <Image
                 src="/icons-youtube.svg"
-                height={50}
-                width={50}
+                height={dimensions.width < 600 ? dimensions.height * 0.12 : dimensions.height * 0.05}
+                width={dimensions.width < 600 ? dimensions.width * 0.12 :  dimensions.width * 0.05 }
                 alt="Whatsapp"
-                className="ml-6"
+                className=""
             />
         </a>
       </div>

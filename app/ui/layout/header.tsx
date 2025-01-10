@@ -65,7 +65,6 @@ export default function Header() {
                         {/* <Link href="/empresa" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Empresa</Link> */}
                         <Link href="/portfolio" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Portfólio</Link>
                         <Link href="/estrutura" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Estrutura</Link>
-                        <Link href="/loja" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Loja</Link>
                         <Link href="/contato" className="rounded-md px-3 ml-6 hover:text-yellow-500 decoration-yellow-500" aria-current="page">Contato</Link>
                         <p className="font-bold pl-4"> | </p>
                         <a href="https://www.instagram.com/flamespirotecnia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="/blank">
@@ -108,10 +107,8 @@ export default function Header() {
                 ${styles.navbar_mobile_content}
                 ${expand && dimensions.width < 1100 && styles.content_expand}`}>
                 <Link href="/" className={`${styles.navbar_mobile_content_item} px-3  hover:text-yellow-500 decoration-yellow-500`} aria-current="page">Home</Link>
-                <Link href="/empresa" className={`${styles.navbar_mobile_content_item} px-3 hover:text-yellow-500 decoration-yellow-500`} aria-current="page">Empresa</Link>
                 <Link href="/portfolio" className={`${styles.navbar_mobile_content_item} px-3 hover:text-yellow-500 decoration-yellow-500`} aria-current="page">Portfólio</Link>
                 <Link href="/estrutura" className={`${styles.navbar_mobile_content_item} px-3 hover:text-yellow-500 decoration-yellow-500`} aria-current="page">Estrutura</Link>
-                <Link href="/loja" className={`${styles.navbar_mobile_content_item} px-3 hover:text-yellow-500 decoration-yellow-500`} aria-current="page">Loja</Link>
                 <Link href="/contato" className={`${styles.navbar_mobile_content_item} px-3 hover:text-yellow-500 decoration-yellow-500`} aria-current="page">Contato</Link>
                 <div className={`${styles.social_media_container}`}>
                     <a href="https://www.instagram.com/flamespirotecnia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="/blank">
